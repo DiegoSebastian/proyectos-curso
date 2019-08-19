@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego de preguntas - Alienauta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de preguntas - Alienauta</h1>
+
+        <div class="scoreboard">
+            <div>Vidas: <div class="lifes">3</div></div>
+            <div>Score: <div class="score">120</div></div>
+            <div>Tiempo: <div class="time">120 seg</div></div>
+        </div>
+
+        <div class="game">
+            <div>
+                <p class="question">Adivina la pregunta!</p>
+            </div>
+            <div class="answers">
+                <button class="answer" onclick="selectAnswer(1)">¿Que tanto sabes?</button>
+                <button class="answer" onclick="selectAnswer(2)">Pon tus habilidades a prueba</button>
+                <button class="answer" onclick="selectAnswer(3)">Aprende con Alienauta</button>
+                <button class="answer" onclick="selectAnswer(4)">Curso de introducción a la programación</button>
+            </div>
+        </div>
+
+        <button id="start" onclick="startGame()">Comenzar Juego</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

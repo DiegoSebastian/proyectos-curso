@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adivina la palabra/El Ahorcado - Alienauta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>El Ahorcado - Alienauta</h1>
+        <div class="score">
+
+            <div class="correct">
+
+                <div>Correctos</div>
+
+                <input type="number" value="0" id="numberCorrect">
+
+            </div>
+
+            <div class="incorrect">
+
+                <div>Incorrectos</div>
+
+                <input type="number" value="0" id="numberIncorrect">
+
+            </div>
+            
+        </div>
+
+
+        <p>Palabra:</p>
+
+        <input type="text" id="box">
+        <div class="keyboard">
+            <div class="firstLine">
+                <button onclick="guessKey('q')">Q</button>
+                <button onclick="guessKey('w')">W</button>
+                <button onclick="guessKey('e')">E</button>
+                <button onclick="guessKey('r')">R</button>
+                <button onclick="guessKey('t')">T</button>
+                <button onclick="guessKey('y')">Y</button>
+                <button onclick="guessKey('u')">U</button>
+                <button onclick="guessKey('i')">I</button>
+                <button onclick="guessKey('o')">O</button>
+                <button onclick="guessKey('p')">P</button>
+            </div>
+            <div class="secondLine">
+                <button onclick="guessKey('a')">A</button>
+                <button onclick="guessKey('s')">S</button>
+                <button onclick="guessKey('d')">D</button>
+                <button onclick="guessKey('f')">F</button>
+                <button onclick="guessKey('g')">G</button>
+                <button onclick="guessKey('h')">H</button>
+                <button onclick="guessKey('j')">J</button>
+                <button onclick="guessKey('k')">K</button>
+                <button onclick="guessKey('l')">L</button>
+                <button onclick="guessKey('ñ')">Ñ</button>
+            </div>
+            <div class="thirdLine">
+                <button onclick="guessKey('z')">Z</button>
+                <button onclick="guessKey('x')">X</button>
+                <button onclick="guessKey('c')">C</button>
+                <button onclick="guessKey('v')">V</button>
+                <button onclick="guessKey('b')">B</button>
+                <button onclick="guessKey('n')">N</button>
+                <button onclick="guessKey('m')">M</button>
+            </div>
+        </div>
+        <div class="control">
+            <button id="start" onclick="startGame()">Comenzar Juego</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

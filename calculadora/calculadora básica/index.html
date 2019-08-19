@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora - Alienauta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    
+    <div class="container">
+        <div class="calculator">
+            <h3>Alien Calculator 1.0 Lite</h3>
+            <hr>
+            <!-- <input type="text" name="box" id="box" pattern="[0-9]+"> -->
+            
+            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" name="box" id="box" class="box" onkeydown="keyDown(event)">
+            <div class="aOperators">
+                    <button id="potencia" onclick="resolver('potencia')">^</button>
+                    <button id="borrar" onclick="clearBox('1char')">C</button>
+                    <button id="limpiar" onclick="clearMemory()">AC</button>
+                </div>
+            <div class="numbers">
+                <div class="col1">
+                    <button class="number" id="number7" onclick="addValue(7)">7</button>
+                    <button class="number" onclick="addValue(8)">8</button>
+                    <button class="number" onclick="addValue(9)">9</button>
+                </div>
+                <div class="col2">
+                    <button class="number" onclick="addValue(4)">4</button>
+                    <button class="number" onclick="addValue(5)">5</button>
+                    <button class="number" onclick="addValue(6)">6</button>
+                </div>
+                <div class="col3">
+                    <button class="number" onclick="addValue(1)">1</button>
+                    <button class="number" onclick="addValue(2)">2</button>
+                    <button class="number" onclick="addValue(3)">3</button>
+                </div>
+                <div class="col3">
+                    <button class="number" onclick="addValue(0)">0</button>
+                    <button class="punto" onclick="addValue('.')">.</button>
+                    <button class="igual" onclick="igual()">=</button>
+                </div>
+            </div>
+            <div class="bOperators">
+                    <button id="suma" onclick="resolver('suma')">+</button>
+                    <button id="resta" onclick="resolver('resta')">-</button>
+                    <button id="multiplicacion" onclick="resolver('multiplicacion')">*</button>
+                    <button id="division" onclick="resolver('division')">/</button>
+                </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

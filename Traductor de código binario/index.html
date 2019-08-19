@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Traductor de código binario - Alienauta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Traductor de Código Binario - Alienauta</h1>
+        <nav>
+            <ul>
+                <li><button onclick="showTextoABinario()">De texto a código binario</button></li>
+                <li><button onclick="showBinarioATexto()">De código binario a texto</button></li>
+            </ul>
+        </nav>
+
+        <div id="textoABinario" class="hide">
+            <h2>Texto a Código Binario</h2>
+            <div class='traductor'>
+                <div class='original'>
+                    <label for="texto">Texto</label>
+                    <textarea name="texto" id="texto" cols="30" rows="10" onclick="seleccionar('texto')" onkeyup="textoABinario()"></textarea>
+                    <button onclick="limpiar()">Limpiar</button>
+                </div>
+                <div id="traduccion">
+                    <label for="binarioTraducido">Binario</label>
+                    <textarea name="binarioTraducido" id="binarioTraducido" cols="30" rows="10" onclick="seleccionar('binarioTraducido')" readonly></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div id="binarioATexto" class="hide">
+            <h2>Código Binario a Texto</h2>
+            <div class="traductor">
+                <div class="original">
+                    <label for="binario">Binario</label>
+                    <textarea name="binario" id="binario" cols="30" rows="10" pattern='[0-1]' onclick="seleccionar('binario')" onkeyup="binarioATexto()"></textarea>
+                    <button onclick="limpiar()">Limpiar</button>
+                </div>
+                <div id="traduccion">
+                    <label for="textoTraducido">Texto</label>
+                    <textarea name="textoTraducido" id="textoTraducido" cols="30" rows="10" onclick="seleccionar('textoTraducido')" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

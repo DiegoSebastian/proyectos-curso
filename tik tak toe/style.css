@@ -1,0 +1,117 @@
+*, body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background: #062915;
+    text-align: center;
+    color: #15dd36;
+    border: 5px solid #15dd36;
+    border-radius: 8px;
+    padding: 50px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.game {
+    width: 60%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    border-radius: 8px;
+}
+
+.game .column {
+    display: flex;
+    justify-content: space-around;
+    font-size: 60px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.game .column .cell {
+    padding: 20px;
+    width: 100%;
+    height: 140px;
+    background: #062915;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #15dd36;
+    border: 5px solid #15dd36;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.game .column .cell:hover {
+    background: #15dd36;
+    color: #062915;
+}
+
+.game .column .cell:active {
+    background: #fff;
+    font-size: 55px;
+    transition: .1s;
+    border-radius: 8px;
+}
+
+.game .column .cell:focus {
+    outline: none;
+}
+
+.game .column .cell:nth-child(1), .game .column .cell:nth-child(2), .game .column .cell:nth-child(3) {
+    border-top: none;
+    border-left: none;
+}
+
+.game .column1 .cell:nth-child(3), .game .column2 .cell:nth-child(3), .game .column3 .cell:nth-child(3) {
+    border-right: none;
+}
+
+.game .column3 .cell:nth-child(1), .game .column3 .cell:nth-child(2), .game .column3 .cell:nth-child(3) {
+    border-bottom: none;
+}
+
+.game .column1 .cell:nth-child(1) {
+    border-top-left-radius: 8px;
+}
+
+.game .column1 .cell:nth-child(3) {
+    border-top-right-radius: 8px;
+}
+
+.game .column3 .cell:nth-child(1) {
+    border-bottom-left-radius: 8px;
+}
+
+.game .column3 .cell:nth-child(3) {
+    border-bottom-right-radius: 8px;
+}
+
+#start {
+    background: #15dd36;
+    color: #062915;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 50px 5px;
+    box-shadow: 0 5px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+#start:hover {
+    background: #062915;
+    color: #15dd36;
+}
